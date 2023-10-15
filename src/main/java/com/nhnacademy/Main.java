@@ -15,13 +15,13 @@ public class Main {
         inout.start();
         output.start();
 
-        input.connect(0, inout.getWire(0));
-        inout.connect(0, output.getWire(0));
+        input.connectOutputWire(0, inout.getOutputWire(0));
+        inout.connectOutputWire(0, output.getWire(0));
 
         input.putMessage(new StringMessage("hi"));
         inout.putMessage(new StringMessage("hello"));
 
-        inout.getWire(0).peek();
+        inout.getOutputWire(0).peek();
         output.getWire(0).peek();
     }
 }

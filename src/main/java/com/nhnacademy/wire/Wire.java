@@ -13,13 +13,13 @@ public class Wire {
 
     public Wire() {
         this.messageQueue = new LinkedList<>();
-        this.size = 4;
+        // this.size = 4;
     }
 
-    public Wire(int size) {
-        this.messageQueue = new LinkedList<>();
-        this.size = size;
-    }
+    // public Wire(int size) {
+    // this.messageQueue = new LinkedList<>();
+    // this.size = size;
+    // }
 
     public void put(Message message) {
         if (messageQueue.size() < size) {
@@ -45,6 +45,10 @@ public class Wire {
         } else {
             return messageQueue.peek();
         }
+    }
+
+    public boolean hasMessage() {
+        return !messageQueue.isEmpty();
     }
 
     public Queue<Message> getMessageQueue() {
