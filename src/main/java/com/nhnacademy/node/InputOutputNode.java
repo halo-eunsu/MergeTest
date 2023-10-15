@@ -65,6 +65,10 @@ public class InputOutputNode extends Node {
         return outputWires.length;
     }
 
+    public int getInputWireCount() {
+        return inputWires.length;
+    }
+
     // 와이어에 메세지 저장
     public void putMessage(Message message) {
         log.info("Message Out ready");
